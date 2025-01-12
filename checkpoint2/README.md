@@ -5,7 +5,7 @@ This repository contains the code and models for the Fake Review Detection proje
 ## **Tasks Overview**
 
 ### **Task 1: Load the Dataset and Inspect its Structure**
-The dataset (`checkpoint1_dataset.csv`) is loaded using pandas, and its structure is inspected using `head()` and `info()` methods to display sample rows and metadata about the columns.
+The dataset (`preprocessed_dataset.csv`) is loaded using pandas, and its structure is inspected using `head()` and `info()` methods to display sample rows and metadata about the columns.
 
 ### **Task 2: Split the Dataset**
 - The dataset is split into features (X) and labels (y) using the `tokenised_reviews` and `label` columns, respectively.
