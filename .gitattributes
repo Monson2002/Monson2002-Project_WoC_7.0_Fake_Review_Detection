@@ -1,0 +1,4 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+checkpoint2/randomForest_model.pkl filter=lfs diff=lfs merge=lfs -text
+checkpoint2/logistic_model.pkl filter=lfs diff=lfs merge=lfs -text
+checkpoint2/svc_model.pkl filter=lfs diff=lfs merge=lfs -text
