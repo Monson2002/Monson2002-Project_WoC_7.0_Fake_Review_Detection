@@ -23,5 +23,4 @@ Locate the Review Section:
 
 ### **Task 3: Saving Results**
 - The reviews are then saved into a CSV file using `df.to_csv("Reviews.csv", index=False)`.
-
 ```

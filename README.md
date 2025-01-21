@@ -24,6 +24,5 @@ PROJECT_WOC_7.0_FAKE_REVIEW_DETECTION/
 │   ├── Reviews.csv
 │   └── README.md
 │
-│
 └── README.md                          # Main repository documentation
 ```
