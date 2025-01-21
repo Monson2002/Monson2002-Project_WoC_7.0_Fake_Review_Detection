@@ -19,5 +19,11 @@ PROJECT_WOC_7.0_FAKE_REVIEW_DETECTION/
 │   ├── Model Training for Fake Review Detection.ipynb           # Jupyter notebook for model training
 │   └── README.md                      # Documentation for checkpoint 2
 │
+├── checkpoint 3/
+│   ├── Review_scraper.py
+│   ├── Reviews.csv
+│   └── README.md
+│
+│
 └── README.md                          # Main repository documentation
 ```
