@@ -1,0 +1,49 @@
+.Main {
+  margin: 0rem 2rem;
+  text-align: center;
+  height: 100vh - 10vh - 7vh;
+  flex-grow: 1;
+  color: rgb(164, 231, 231);
+  background-color: beige;
+
+  .TableHeader {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+
+    .Heading {
+      background-color: oklch(0.279 0.041 360.031);
+      margin: 0;
+      padding: 0.5rem;
+      font-size: large;
+      border: thin solid transparent;
+      border-radius: 0.75rem;
+    }
+  }
+
+  .ReviewContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .UserReviewContainer {
+      background-color: blanchedalmond;
+      height: auto;
+    }
+
+    .UserReviewPrediction {
+      background-color: blanchedalmond;
+      height: auto;
+    }
+  
+  }
+}
+
+.ReviewItem {
+  list-style: none;
+  font-size: small;
+  text-align: justify;
+  margin: .5rem;
+  padding: .25rem;
+  background-color: aliceblue;
+}
