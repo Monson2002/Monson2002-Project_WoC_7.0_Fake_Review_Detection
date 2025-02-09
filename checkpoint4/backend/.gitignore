@@ -1,0 +1,36 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Flask instance folder
+instance/
+
+# Flask settings
+*.env
+*.flaskenv
+
+# VSCode settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.env/
+*.egg-info/
+
+# PyCharm
+.idea/
+
+# Log files
+*.log

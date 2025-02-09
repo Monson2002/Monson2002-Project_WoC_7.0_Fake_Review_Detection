@@ -1,14 +1,35 @@
 import styles from './SearchComponent.module.scss'
+import SearchComponentProps, { ReviewBodyProps } from './SearchComponentProps';
+import axiosInstance from '../../APIs/axiosInstance';
 import { useState } from 'react';
+import axios from 'axios';
 
-const SearchComponent = () => {
+
+const SearchComponent = ({ setReviews }: SearchComponentProps ) => {
   
   const [search, setSearch] = useState('')
-  
-  const scrapeData = () => {
-    if (search.length > 0) {
-      console.log(search);
+
+  const getReviews = async (search: string) => {
+    try {
+      if (search.length > 0) {
+        const response = await axiosInstance.get<ReviewBodyProps[]>(
+          '/',
+          {
+            headers: { Accept: 'application/json' }  
+          }
+        );
+        localStorage.setItem('review_list', JSON.stringify(response.data))
+        setReviews(JSON.parse(localStorage.getItem('review_list')!));
+      }
+    } catch (error) {
+      console.error("Error in getReviews:", error);
+      if (axios.isAxiosError(error)) {
+        console.error("Status:", error.response?.status);
+        console.error("Data:", error.response?.data);
+      }
+      throw error;
     }
+    
   }
 
   return (
@@ -26,7 +47,7 @@ const SearchComponent = () => {
           <button 
           type="submit" 
           className={styles.Button}
-          onClick={() => scrapeData()}
+          onClick={() => getReviews(search)}
           >Search</button>
         </section>
       </main>
