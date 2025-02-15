@@ -7,3 +7,8 @@
   font-family: 'Martian Mono';
   font-size: 1rem;
 }
+
+:root {
+  --heading-back-color: oklch(0.279 0.041 360.031);
+  --back-color: oklch(0.279 0.041 260.031);
+}

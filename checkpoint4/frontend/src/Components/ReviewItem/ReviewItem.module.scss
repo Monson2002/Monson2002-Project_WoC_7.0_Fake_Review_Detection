@@ -1,0 +1,53 @@
+.ReviewItem {
+  list-style: none;
+  font-size: small;
+  text-align: justify;
+  color: black;
+  width: 93vw;
+  display: flex;
+  justify-content: space-between;
+
+  .Left {
+    background-color: aliceblue;
+    margin: .5rem;
+    padding: .75rem;
+    border-radius: .75rem;
+
+    .ReviewItemSecondaryContent {
+      font-size: medium;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.25rem 0;
+      width: 64vw;
+  
+      .ReviewTitle {
+        width: 35vw;
+      }
+    }
+  
+    .Para {
+      font-size: small;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: .5rem 0;
+      width: 67vw;
+    }
+  }
+
+  .Right {
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    margin: .5rem;
+    padding: .75rem;
+    border-radius: .75rem;
+    
+    .Prediction {
+      font-size: x-large;
+    }
+  }
+}

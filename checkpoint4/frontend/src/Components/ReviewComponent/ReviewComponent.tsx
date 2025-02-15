@@ -1,13 +1,21 @@
-import { useState } from 'react';
 import styles from './ReviewComponent.module.scss'
+import { ReviewBodyProps } from '../SearchComponent/SearchComponent.types';
+import { TailSpin } from "react-loader-spinner";
+import ReviewItem from '../ReviewItem/ReviewItem';
 
-const ReviewComponent = ({reviews}: {reviews: any}) => {
-
-  console.log(reviews);
-  // console.log(localStorage.getItem('review_list'));
-
+const ReviewComponent = (
+  {reviews, 
+  loading}: 
+  {reviews: ReviewBodyProps[] | string, 
+  loading: boolean}) => {
+  
   return (
     <>
+      {loading ? (
+        <div className={styles.Loader}>
+          <TailSpin color="white" radius={"0px"}/>
+        </div>
+      ) : 
       <main className={styles.Main}>
         <section className={styles.TableHeader}>
           <h1 className={styles.Heading}>Reviews</h1>
@@ -15,31 +23,14 @@ const ReviewComponent = ({reviews}: {reviews: any}) => {
         </section>
         <section className={styles.ReviewContainer}>
           <ul className={styles.UserReviewContainer}>
-            jkjvei
-            {reviews.length > 0 && reviews.map((reviewItem: any, id: number) => {
+            {typeof reviews === 'object' && reviews.length > 0 && reviews.map((reviewItem: any, id: number) => {
               return (
-                <li key={id} className={styles.ReviewItem}>
-                  {reviewItem.color}
-                </li>
+                <ReviewItem key={id} data={reviewItem}/>
               )
             })}
           </ul>
-          <ul className={styles.UserReviewPrediction}>
-            <li className={styles.ReviewItem}>
-              Review No x
-            </li>
-            <li className={styles.ReviewItem}>
-              Review No x
-            </li>
-            <li className={styles.ReviewItem}>
-              Review No x
-            </li>
-            <li className={styles.ReviewItem}>
-              Review No x
-            </li>
-          </ul>
         </section>
-      </main>
+      </main>}
     </>
   )
 }
