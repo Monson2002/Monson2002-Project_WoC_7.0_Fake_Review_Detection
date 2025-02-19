@@ -24,7 +24,7 @@ PROJECT_WOC_7.0_FAKE_REVIEW_DETECTION/
 │   ├── Reviews.csv
 │   └── README.md
 │
-├── checkpoint 3/
+├── checkpoint 4/
 │   ├── backend
 │   └── frontend
 │
