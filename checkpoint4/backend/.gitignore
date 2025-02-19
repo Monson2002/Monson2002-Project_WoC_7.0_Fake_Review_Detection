@@ -34,3 +34,4 @@ env/
 
 # Log files
 *.log
+.vercel
